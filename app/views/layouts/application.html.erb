@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  
+	<div class= "navbar">
+  		<title>Blog</title>
+  	</div>
+
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<div class ="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+			<a href ="#" class="brand"> Treebook </a>
+				<ul class ="nav">
+					<li><%= link_to "All Statuses", statuses_path %></li>
+<!-- El _path direcciona lo que esta antes, ej statuses, new_status seria new status_path  -->
+				</ul>
+
+			</div>
+		</div>	
+	</div>
+
+	<div class="container" >
+		<%= yield %>
+		
+		</div>
 
 </body>
 </html>
